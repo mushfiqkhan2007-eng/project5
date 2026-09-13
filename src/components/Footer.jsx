@@ -9,7 +9,7 @@ const columns = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-100 mt-8">
+    <footer id="footer" className="border-t border-slate-100 mt-8">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-14 grid md:grid-cols-[1.3fr_1fr_1fr_1fr] gap-10">
         <div>
           <img src={logoText} alt="Dev Stack" className="h-8" />

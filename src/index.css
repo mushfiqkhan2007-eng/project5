@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: 90px; /* keeps content clear of the sticky navbar */
+}
+
 :root {
   /* Single source of truth for the brand gradient (orange -> pink -> violet).
      Change these three stops to re-theme the whole UI. */

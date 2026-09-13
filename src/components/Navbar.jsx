@@ -2,7 +2,13 @@ import { useState } from 'react'
 import logoText from '../assets/logo-text.png'
 import { IconMenu, IconClose } from './icons'
 
-const links = ['Home', 'Technologies', 'Projects', 'About', 'Contact']
+const links = [
+  { label: 'Home', href: '#home' },
+  { label: 'Technologies', href: '#technologies' },
+  { label: 'Projects', href: '#footer' },
+  { label: 'About', href: '#footer' },
+  { label: 'Contact', href: '#footer' },
+]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -17,15 +23,15 @@ export default function Navbar() {
           <nav className="flex items-center gap-8">
             {links.map((link, i) => (
               <a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className={
                   i === 0
                     ? 'text-pink-600 font-medium text-sm'
                     : 'text-slate-700 hover:text-slate-900 text-sm'
                 }
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </nav>
@@ -69,15 +75,16 @@ export default function Navbar() {
           <nav className="md:hidden pb-4 flex flex-col gap-3">
             {links.map((link, i) => (
               <a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
+                onClick={() => setOpen(false)}
                 className={
                   i === 0
                     ? 'text-pink-600 font-medium text-sm'
                     : 'text-slate-700 text-sm'
                 }
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </nav>

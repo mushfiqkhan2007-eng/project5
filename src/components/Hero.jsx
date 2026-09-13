@@ -2,7 +2,7 @@ import banner from '../assets/banner-stack.png'
 
 export default function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+    <section id="home" className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
       <div>
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
           <span className="block text-slate-900">Build Your Ideal</span>
